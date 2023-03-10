@@ -1,38 +1,31 @@
-
-@baseUrl =http://localhost:3000/api
-
-
-@resourceName=products
+@baseUrl = http://localhost:3000/api
 
 # Categories
 
-# @name getAll
-
-GET {{baseUrl}}/{{resourceName}}
-
+# @name getAllCategories
+GET {{baseUrl}}/categories
 
 ###
 
-# @name filterProducts
+# @name addNewCategory
+POST {{baseUrl}}/categories
+Content-Type: application/json
 
-GET {{baseUrl}}/{{resourceName}}?color=blue&price_gte=200
-
-
-#pagination
+{
+  "name": "Laptop"
+}
 
 ###
 
-# @name pagination
-GET {{baseUrl}}/{{resourceName}}?_page=1&_limit=2
+# @name updateCategory
+PATCH {{baseUrl}}/categories/2
+Content-Type: application/json
 
+{
+  "name": "New Laptop"
+}
 
-### 
+###
 
-# @name sort
-GET {{baseUrl}}/{{resourceName}}?_sort=price&_oder=asc
-
-
-############################
-
-
-
+# @name removeCategory
+DELETE {{baseUrl}}/categories/2

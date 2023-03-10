@@ -15,7 +15,8 @@
   "author": "thientvse",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.17.2"
+    "json-server": "^0.17.2",
+    "query-string": "^8.1.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",

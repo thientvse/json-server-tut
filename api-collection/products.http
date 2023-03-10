@@ -1,0 +1,38 @@
+
+@baseUrl =http://localhost:3000/api
+
+
+@resourceName=products
+
+# Categories
+
+# @name getAll
+
+GET {{baseUrl}}/{{resourceName}}
+
+
+###
+
+# @name filterProducts
+
+GET {{baseUrl}}/{{resourceName}}?color=blue&price_gte=200
+
+
+#pagination
+
+###
+
+# @name pagination
+GET {{baseUrl}}/{{resourceName}}?_page=1&_limit=2
+
+
+### 
+
+# @name sort
+GET {{baseUrl}}/{{resourceName}}?_sort=price&_oder=asc
+
+
+############################
+
+
+
